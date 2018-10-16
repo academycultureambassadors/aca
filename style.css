@@ -3,12 +3,12 @@
 }
 
 html {
-  font-size: 18px;
+  font-size: 20px;
 }
 
 body {
-  background: #f3f3f3;
-  color: #333;
+  background: #fff;
+  color: #26352e;
   margin: 0;
   padding: 0;
   font-family: "Proxima Nova";
@@ -17,6 +17,40 @@ body {
 
 a {
   color: #148b65;
+  text-decoration: none;
+  background-image: linear-gradient(
+      0deg,
+      #148b65 0,
+      #148b65 0.12em,
+      transparent 0.12em,
+      transparent 100%
+    ),
+    linear-gradient(
+      0deg,
+      #ebf0ed 0,
+      #ebf0ed 0.12em,
+      transparent 0.12em,
+      transparent 100%
+    );
+  background-size: 0 100%, 100% 100%;
+  background-repeat: no-repeat;
+  transition: background-size 0.2s ease;
+}
+
+a:hover {
+  background-size: 100% 100%;
+}
+
+a.button {
+  background: #148b65;
+  border-radius: 3px;
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  padding: 0.5rem 1rem;
+  display: inline-block;
+  text-align: center;
 }
 
 .cont {
@@ -24,15 +58,8 @@ a {
   padding-left: calc(50vw - 470px);
 }
 
-.shadow {
-  box-shadow: 0 4px 45px rgba(0, 0, 0, 0.1);
-}
-
 .card {
-  background: #fff;
-  padding: 50px 100px;
-  border-top: 10px solid #148b65;
-  margin: 50px auto;
+  margin: 100px auto;
   width: 940px;
 }
 
@@ -40,7 +67,16 @@ a {
   color: #148b65;
   margin-top: 0;
   margin-bottom: 25px;
-  text-align: center;
+  font-size: 2rem;
+  line-height: 1.1;
+}
+
+.card h2:after {
+  content: "";
+  display: block;
+  border-top: 5px solid #ebf0ed;
+  margin: 1rem 0;
+  width: 50px;
 }
 
 .colx2 {
@@ -60,13 +96,14 @@ a {
   text-align: center;
 }
 
-body > header {
-  background: #fff;
+header {
+  background: #ebf0ed;
   padding-top: 150px;
-  padding-bottom: 150px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   position: relative;
+  overflow: hidden;
 }
 
 h1 {
@@ -76,48 +113,128 @@ h1 {
   overflow: hidden;
   background: url(img/logo.png);
   background-size: 100% 100%;
+  margin-left: -128px;
 }
 
-.decor {
-  position: absolute;
-  width: 300px;
-  height: 200px;
+header p {
+  font-size: 1.5rem;
+}
+
+.strip {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(10, 1fr);
+  grid-gap: 0;
+  margin-top: 100px;
+  width: 200vw;
+  animation: animateStrip linear 20s infinite;
+  position: relative;
 }
 
-.decor1 {
-  top: 0;
+.strip img {
+  width: 100%;
+  height: auto;
+}
+
+@keyframes animateStrip {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -100%;
+  }
+}
+
+.curve1 {
+  position: absolute;
   left: 0;
-}
-
-.decor2 {
+  width: 100%;
+  height: 30px;
   bottom: 0;
-  right: 0;
+  z-index: 3;
 }
 
-.decor2 :first-child {
-  grid-column-start: 2;
-}
-
-.decor span {
-  height: 100px;
-  background: #148b65;
-  opacity: 0;
-  transition: opacity 0.3s ease-in;
+.curve2 {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 30px;
+  top: 0;
+  z-index: 3;
+  transform: rotate(180deg);
 }
 
 footer {
   display: grid;
-  background: #fff;
+  background: #ebf0ed;
   grid-template-columns: 1fr 1fr;
   grid-gap: 50px;
   align-items: end;
   padding-top: 50px;
   padding-bottom: 50px;
-  box-shadow: 0 4px 45px rgba(0, 0, 0, 0.1);
+  position: relative;
+  font-size: 0.8rem;
 }
 
 .legal {
   text-align: right;
+}
+
+@media screen and (max-width: 1296px) {
+  header h1 {
+    margin-left: 0;
+  }
+  header p {
+    padding-left: 128px;
+  }
+}
+
+@media screen and (max-width: 1040px) {
+  .card {
+    margin-left: 50px;
+    margin-right: 50px;
+    width: auto;
+  }
+  .cont {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .strip {
+    animation: none;
+    grid-template-columns: repeat(6, 1fr);
+    width: 100%;
+  }
+  .strip img {
+    grid-column: span 2;
+  }
+  .strip img:first-child,
+  .strip img:nth-child(2) {
+    grid-column: span 3;
+  }
+  .strip img:nth-child(6),
+  .strip img:nth-child(7),
+  .strip img:nth-child(8),
+  .strip img:nth-child(9),
+  .strip img:nth-child(10) {
+    display: none;
+  }
+  .strip img h1 {
+    width: 420px;
+    height: 85px;
+    padding-top: 85px;
+  }
+  header p {
+    padding-left: 96px;
+    font-size: 1rem;
+  }
+
+  footer {
+    display: block;
+  }
+
+  .legal {
+    text-align: left;
+  }
 }
