@@ -27,8 +27,8 @@ a {
     ),
     linear-gradient(
       0deg,
-      #ebf0ed 0,
-      #ebf0ed 0.12em,
+      #f4f5f4 0,
+      #f4f5f4 0.12em,
       transparent 0.12em,
       transparent 100%
     );
@@ -53,80 +53,158 @@ a.button {
   text-align: center;
 }
 
-.cont {
-  padding-right: calc(50vw - 470px);
-  padding-left: calc(50vw - 470px);
+img {
+  max-width: 100%;
+  height: auto;
 }
 
-.card {
-  margin: 100px auto;
-  width: 940px;
+section {
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 
-.card h2 {
+section h2 {
   color: #148b65;
   margin-top: 0;
-  margin-bottom: 25px;
   font-size: 2rem;
   line-height: 1.1;
 }
 
-.card h2:after {
-  content: "";
-  display: block;
-  border-top: 5px solid #ebf0ed;
-  margin: 1rem 0;
-  width: 50px;
+/* AUX CLASSES */
+
+.cont {
+  padding-right: calc(50vw - 640px);
+  padding-left: calc(50vw - 640px);
 }
 
-.colx2 {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 50px;
-  align-items: stretch;
+.alt {
+  background: #f4f5f4;
 }
 
-.colx2 > * {
-  width: auto;
-  margin: 0;
+.well {
   padding: 50px;
+  margin: -50px 100px;
 }
 
 .center {
   text-align: center;
 }
 
+.mb {
+  padding-bottom: 100px;
+}
+
+.illustration {
+  margin: 1rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.illustration img {
+  max-width: 100%;
+  width: 150px;
+}
+
+.illustration img.icon {
+  max-width: 200px;
+}
+
+.ly-aux-left,
+.ly-aux-right {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 50px;
+}
+
+.ly-aux-left h2 {
+  grid-column: 2 / -1;
+  margin-bottom: 0;
+}
+
+.ly-aux-right h2 {
+  grid-column: 1 / -1;
+  margin-bottom: 0;
+}
+
+hr {
+  border: none;
+  display: block;
+  width: 1280px;
+  margin: 0 auto;
+  height: 0;
+  border-top: 2px solid #e9eae9;
+}
+.quote {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 2rem;
+  font-style: italic;
+  line-height: 1.25;
+}
+
+.quote p {
+  margin-top: 1rem;
+  width: 90%;
+}
+
+.quote p:before {
+  content: "“";
+  color: #148b65;
+}
+
+.quote p:after {
+  content: "”";
+  color: #148b65;
+}
+
+/* NAV */
+
+nav {
+  height: 100px;
+  background: #fff;
+  padding: 20px;
+}
+
+h1 {
+  width: 295px;
+  height: 60px;
+  padding-top: 60px;
+  overflow: hidden;
+  background: url(img/logo.png);
+  background-size: 100% 100%;
+  margin: 0 auto;
+}
+
+/* HEADER */
+
 header {
-  background: #ebf0ed;
-  padding-top: 150px;
+  background-color: #148b65;
+  background-image: linear-gradient(0deg, #148b65 0%, #19c68c 100%);
+  padding-top: 200px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   position: relative;
   overflow: hidden;
-}
-
-h1 {
-  width: 560px;
-  height: 114px;
-  padding-top: 114px;
-  overflow: hidden;
-  background: url(img/logo.png);
-  background-size: 100% 100%;
-  margin-left: -128px;
+  color: #fff;
+  text-align: center;
 }
 
 header p {
-  font-size: 1.5rem;
+  font-size: 2rem;
+  line-height: 1.1;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .strip {
   display: grid;
   grid-template-columns: repeat(10, 1fr);
   grid-gap: 0;
-  margin-top: 100px;
+  margin-top: 200px;
   width: 200vw;
-  animation: animateStrip linear 20s infinite;
+  animation: animateStrip linear 60s infinite;
   position: relative;
 }
 
@@ -165,7 +243,7 @@ header p {
 
 footer {
   display: grid;
-  background: #ebf0ed;
+  background: #f4f5f4;
   grid-template-columns: 1fr 1fr;
   grid-gap: 50px;
   align-items: end;
@@ -178,6 +256,56 @@ footer {
 .legal {
   text-align: right;
 }
+
+ul.lines {
+  list-style: none;
+  padding: 0;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+ul.lines li {
+  padding-bottom: 0.5rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid #bbc5bb;
+}
+
+.mosaic {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 25px;
+}
+
+.mosaic img {
+  border-radius: 5px;
+}
+
+.newsletter-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 25px;
+  margin: 1rem 200px;
+}
+
+.newsletter-grid .guest {
+  text-align: center;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.newsletter-grid img {
+  width: 100px;
+  margin: 0 auto;
+  border-radius: 50%;
+}
+
+.img-inline-left {
+  width: 150px;
+  border-radius: 5px;
+}
+
+/*  MEDIA QUERIES */
 
 @media screen and (max-width: 1296px) {
   header h1 {
