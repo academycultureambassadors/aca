@@ -115,6 +115,7 @@ section h2 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-column-gap: 50px;
+  align-items: start;
 }
 
 .ly-aux-left-2 {
@@ -142,6 +143,7 @@ hr {
   border: none;
   display: block;
   width: 1280px;
+  max-width: 100%;
   margin: 0 auto;
   height: 0;
   border-top: 2px solid #e9eae9;
@@ -358,24 +360,125 @@ ul.lines li {
 
 /*  MEDIA QUERIES */
 
-@media screen and (max-width: 1296px) {
-  header h1 {
-    margin-left: 0;
-  }
-  header p {
-    padding-left: 128px;
-  }
-}
-
-@media screen and (max-width: 1040px) {
-  .card {
-    margin-left: 50px;
-    margin-right: 50px;
-    width: auto;
-  }
+@media screen and (max-width: 1380px) {
   .cont {
     padding-left: 50px;
     padding-right: 50px;
+  }
+  .newsletter-grid {
+    margin: 1rem 0;
+  }
+
+  header p {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .ly-aux-left-2 {
+    grid-template-columns: 1fr 3fr;
+  }
+  .illustration img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+  }
+  #mc_embed_signup .button {
+    width: auto !important;
+    margin: 0;
+  }
+  .ly-aux-right {
+    display: block;
+  }
+  .curve1 {
+    height: 15px;
+  }
+
+  .curve2 {
+    height: 15px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .newsletter-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .curve1 {
+    height: 10px;
+  }
+
+  .curve2 {
+    height: 10px;
+  }
+  header p {
+    width: 100%;
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .cont {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .ly-aux-left-2 {
+    display: block;
+  }
+  .ly-aux-left-2 h2 {
+    text-align: center;
+  }
+  .illustration {
+    width: 120px;
+    margin: 1rem auto;
+  }
+  .illustration img {
+    width: 100%;
+    height: auto;
+  }
+  .cta {
+    text-align: center;
+  }
+  .newsletter-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .mosaic {
+    grid-template-columns: 1fr;
+  }
+  .nomobile {
+    display: none;
+  }
+  .curve1 {
+    height: 5px;
+  }
+
+  .curve2 {
+    height: 5px;
+  }
+  header .cont {
+    padding: 0;
+    margin: 0;
+  }
+  h1 {
+    background: white url(img/ACA-National.png);
+    background-size: 250px 75px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 100%;
+    height: 95px;
+    padding-top: 95px;
+    margin-top: 0;
+  }
+  header {
+    margin-top: 0;
+    padding-top: 0;
+  }
+  header p {
+    font-size: 1rem;
+    margin: 1rem 50px;
+    width: auto;
+  }
+  header img.icon {
+    display: none;
   }
 }
 
@@ -403,10 +506,6 @@ ul.lines li {
     width: 420px;
     height: 85px;
     padding-top: 85px;
-  }
-  header p {
-    padding-left: 96px;
-    font-size: 1rem;
   }
 
   footer {
