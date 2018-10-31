@@ -509,10 +509,23 @@ ul.lines li {
   }
 
   footer {
-    display: block;
+    grid-template-columns: 100px 1fr;
   }
 
   .legal {
     text-align: left;
+    grid-column: 2 / -1;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  footer {
+    display: block;
+    text-align: center;
+  }
+
+  .legal {
+    text-align: center;
+    margin-top: 1rem;
   }
 }
