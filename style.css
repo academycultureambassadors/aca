@@ -191,7 +191,7 @@ h1 {
 header {
   background-color: #ecf5f2;
   background-image: linear-gradient(0deg, #d6e7e2 0%, #ecf5f2 100%);
-  padding-top: 50px;
+  padding-top: 30px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -219,7 +219,7 @@ header img.icon {
   display: grid;
   grid-template-columns: repeat(10, 1fr);
   grid-gap: 0;
-  margin-top: 100px;
+  margin-top: 30px;
   width: 200vw;
   animation: animateStrip linear 60s infinite;
   position: relative;
@@ -340,9 +340,7 @@ ul.lines li {
 }
 
 #mc_embed_signup input.email {
-  font-size: 0.8rem !important;
-  padding: 0.5rem 1rem !important;
-  height: 52px !important;
+  display: none !important;
 }
 
 #mc_embed_signup .button {
