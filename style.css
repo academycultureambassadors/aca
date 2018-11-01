@@ -415,6 +415,7 @@ ul.lines li {
   padding: 10px 20px;
   text-align: center;
   margin: 0;
+  font-size: 0.8rem;
 }
 
 /*  MEDIA QUERIES */
@@ -472,6 +473,9 @@ ul.lines li {
   header p {
     width: 100%;
     font-size: 1.5rem;
+  }
+  .overlay .contents {
+    padding: 20px;
   }
 }
 
