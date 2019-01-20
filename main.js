@@ -21,7 +21,7 @@ var openLinks = document.querySelectorAll(".open-overlay");
 var bodyElement = document.querySelector("body");
 
 closeLinks.forEach(link => {
-  link.addEventListener("click", function(e) {
+  link.addEventListener("click", function (e) {
     e.preventDefault();
     overlays.forEach(overlay => {
       overlay.classList.remove("open");
@@ -31,9 +31,27 @@ closeLinks.forEach(link => {
 });
 
 openLinks.forEach(link => {
-  link.addEventListener("click", function(e) {
+  link.addEventListener("click", function (e) {
     e.preventDefault();
     document.querySelector(link.getAttribute("opens")).classList.add("open");
     bodyElement.style.overflowY = "hidden";
+  });
+});
+
+// COLLAPSIBLE BLOCKS
+var morelinks = document.querySelectorAll(".morelink"),
+  lesslinks = document.querySelectorAll(".lesslink");
+
+morelinks.forEach(morelink => {
+  morelink.addEventListener("click", function (e) {
+    e.preventDefault();
+    this.parentElement.parentElement.classList.add("open");
+  });
+});
+
+lesslinks.forEach(lesslink => {
+  lesslink.addEventListener("click", function (e) {
+    e.preventDefault();
+    this.parentElement.parentElement.classList.remove("open");
   });
 });
