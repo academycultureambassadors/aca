@@ -108,6 +108,7 @@ section h2 {
   display: grid;
   grid-template-columns: 2fr 3fr;
   grid-column-gap: 50px;
+  grid-template-rows: 2.5rem auto;
 }
 
 .ly-aux-left-2 .illustration {
@@ -127,11 +128,14 @@ section h2 {
 hr {
   border: none;
   display: block;
-  width: 1280px;
-  max-width: 100%;
+  max-width: 1280px;
   margin: 0 auto;
   height: 0;
   border-top: 2px solid #e9eae9;
+}
+
+.content hr {
+  margin: 2rem auto;
 }
 
 .quote {
