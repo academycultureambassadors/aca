@@ -55,3 +55,13 @@ lesslinks.forEach(lesslink => {
     this.parentElement.parentElement.classList.remove("open");
   });
 });
+
+// MENU
+
+var bodyElement = document.querySelector("body");
+var menuToggle = document.querySelector(".menutoggle");
+
+menuToggle.addEventListener("click", function (e) {
+  e.preventDefault();
+  bodyElement.classList.toggle("showmenu");
+});
