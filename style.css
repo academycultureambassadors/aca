@@ -649,6 +649,7 @@ ul.lines li {
 .showmenu .menutoggle:before {
   content: "×";
   font-size: 2em;
+  z-index: 11;
 }
 
 .showmenu .menu {
