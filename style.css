@@ -621,7 +621,7 @@ ul.lines li {
 .menu {
   position: fixed;
   width: 320px;
-  z-index: 99;
+  z-index: 10;
   top: 0;
   right: 0;
   bottom: 0;
