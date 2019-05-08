@@ -1,0 +1,1 @@
+<?php header('location: teams-get-it-white-paper.pdf'); ?>
